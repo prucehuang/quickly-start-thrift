@@ -8,39 +8,40 @@ import org.apache.thrift.transport.TTransport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class HelloWorldClient{
-	
+public class HelloWorldClient {
+
 	private static final String CLASS_NAME = HelloWorldClient.class.getSimpleName();
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(CLASS_NAME);
 
 	private TTransport transport = null;
-	
+
 	private HelloWorldService.Client client = null;
-	
+
 	private String server = null;
-	
+
 	private int port = -1;
-	
+
 	public HelloWorldClient(String server, int port) {
 		this.server = server;
 		this.port = port;
 	}
-	
+
 	public boolean init() {
 		boolean ret = false;
-		
-		try {  
-            transport = new TFramedTransport(new TSocket(server, port, 5 * 1000));
-            TProtocol protocol = new TBinaryProtocol(transport);  
-            client = new HelloWorldService.Client(protocol);  
-            transport.open();
-            
-            ret = true;
-        } catch (Exception e) {  
-            logger.warn(e.getMessage(), e);
-        }
-		
+
+		try {
+			transport = new TFramedTransport(new TSocket(server, port, 5 * 1000));
+			TProtocol protocol = new TBinaryProtocol(transport);
+			client = new HelloWorldService.Client(protocol);
+			transport.open();
+			System.out.println("init finish");
+			ret = true;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			logger.warn(e.getMessage(), e);
+		}
+
 		return ret;
 	}
 
@@ -51,31 +52,36 @@ public class HelloWorldClient{
 			} catch (Exception e) {
 				logger.warn(e.getMessage(), e);
 			}
-			
+
 			transport = null;
 			client = null;
 		}
 	}
-	
+
 	public String helloWorld(String username) {
+		String res = "";
 		if (client != null) {
 			try {
-				return client.HelloWorld(username);
+				System.err.println(client);
+				res = client.HelloWorld(username);
 			} catch (Exception e) {
-				logger.warn("failed, username = {}", username);
-			}	
+				System.out.println(e.getMessage());
+				System.out.println("failed, username = " + username);
+			}
 		}
-		return "";
+		return res;
 	}
 
 	public static void main(String[] args) {
-		//test
-		HelloWorldClient client = new HelloWorldClient("127.0.0.1", 1234);
+		// test
+		HelloWorldClient client = new HelloWorldClient("localhost", 19090);
+		System.out.println("init start");
 		if (client.init()) {
-			logger.warn("init ok");
+			System.out.println("init ok  -- " + client.toString());
 			System.out.println(client.helloWorld("huanghaifeng"));
+			System.out.println("get data finish");
 		} else {
-			logger.warn("init failed");
+			System.out.println("init failed");
 		}
 		client.uninit();
 	}
