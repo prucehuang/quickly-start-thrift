@@ -1,4 +1,4 @@
-package com.gitlab.huanghaifeng.thrift.tutorial;
+package com.git.huanghaifeng.thrift.tutorial;
 
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TServer.Args;
@@ -8,8 +8,7 @@ import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
 import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
 
-// Generated code
-import com.gitlab.huanghaifeng.thrift.tutorial.tutorial.*;
+import com.git.huanghaifeng.thrift.tutorial.tutorial.*;
 
 public class JavaServer {
 

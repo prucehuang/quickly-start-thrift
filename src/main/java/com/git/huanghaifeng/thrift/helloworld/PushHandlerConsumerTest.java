@@ -1,3 +1,4 @@
+package com.git.huanghaifeng.thrift.helloworld;
 //package pushserver;
 //
 //import java.io.BufferedReader;

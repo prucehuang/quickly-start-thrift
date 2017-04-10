@@ -1,4 +1,5 @@
-//package com.gitlab.huanghaifeng.thrift.helloworld;
+package com.git.huanghaifeng.thrift.helloworld;
+//package com.git.huanghaifeng.thrift.helloworld;
 //
 //import java.lang.reflect.Constructor;
 //

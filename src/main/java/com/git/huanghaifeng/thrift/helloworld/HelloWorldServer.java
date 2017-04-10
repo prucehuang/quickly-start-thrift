@@ -1,4 +1,4 @@
-package com.gitlab.huanghaifeng.thrift.helloworld;
+package com.git.huanghaifeng.thrift.helloworld;
 
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TBinaryProtocol.Factory;
@@ -10,7 +10,7 @@ import org.apache.thrift.transport.TServerTransport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.gitlab.huanghaifeng.thrift.helloworld.HelloWorldService.Processor;
+import com.git.huanghaifeng.thrift.helloworld.HelloWorldService.Processor;
 
 public class HelloWorldServer {
 	private static final String CLASS_NAME = HelloWorldServer.class.getSimpleName();

@@ -1,4 +1,4 @@
-package com.gitlab.huanghaifeng.thrift.helloworld;
+package com.git.huanghaifeng.thrift.helloworld;
 
 import org.apache.thrift.TException;
 

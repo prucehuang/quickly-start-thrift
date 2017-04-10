@@ -4,7 +4,7 @@
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  *  @generated
  */
-package com.gitlab.huanghaifeng.thrift.tutorial.tutorial;
+package com.git.huanghaifeng.thrift.tutorial.tutorial;
 
 import org.apache.thrift.scheme.IScheme;
 import org.apache.thrift.scheme.SchemeFactory;
@@ -638,7 +638,7 @@ public class Work
 					break;
 				case 3: // OP
 					if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-						struct.op = com.gitlab.huanghaifeng.thrift.tutorial.tutorial.Operation
+						struct.op = com.git.huanghaifeng.thrift.tutorial.tutorial.Operation
 								.findByValue(iprot.readI32());
 						struct.setOpIsSet(true);
 					} else {
@@ -745,7 +745,7 @@ public class Work
 				struct.setNum2IsSet(true);
 			}
 			if (incoming.get(2)) {
-				struct.op = com.gitlab.huanghaifeng.thrift.tutorial.tutorial.Operation.findByValue(iprot.readI32());
+				struct.op = com.git.huanghaifeng.thrift.tutorial.tutorial.Operation.findByValue(iprot.readI32());
 				struct.setOpIsSet(true);
 			}
 			if (incoming.get(3)) {

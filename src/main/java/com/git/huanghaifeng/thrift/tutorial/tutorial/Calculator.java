@@ -4,7 +4,7 @@
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  *  @generated
  */
-package com.gitlab.huanghaifeng.thrift.tutorial.tutorial;
+package com.git.huanghaifeng.thrift.tutorial.tutorial;
 
 import org.apache.thrift.scheme.IScheme;
 import org.apache.thrift.scheme.SchemeFactory;
@@ -37,7 +37,7 @@ public class Calculator {
 	 * name and can optionally inherit from another service using the extends
 	 * keyword.
 	 */
-	public interface Iface extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.Iface {
+	public interface Iface extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.Iface {
 
 		/**
 		 * A method definition looks like C code. It has a return type,
@@ -60,7 +60,7 @@ public class Calculator {
 
 	}
 
-	public interface AsyncIface extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncIface {
+	public interface AsyncIface extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncIface {
 
 		public void ping(org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException;
 
@@ -74,7 +74,7 @@ public class Calculator {
 
 	}
 
-	public static class Client extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.Client
+	public static class Client extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.Client
 			implements Iface {
 		public static class Factory implements org.apache.thrift.TServiceClientFactory<Client> {
 			public Factory() {
@@ -172,7 +172,7 @@ public class Calculator {
 
 	}
 
-	public static class AsyncClient extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncClient
+	public static class AsyncClient extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncClient
 			implements AsyncIface {
 		public static class Factory implements org.apache.thrift.async.TAsyncClientFactory<AsyncClient> {
 			private org.apache.thrift.async.TAsyncClientManager clientManager;
@@ -351,7 +351,7 @@ public class Calculator {
 	}
 
 	public static class Processor<I extends Iface>
-			extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.Processor<I>
+			extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.Processor<I>
 			implements org.apache.thrift.TProcessor {
 		private static final Logger LOGGER = LoggerFactory.getLogger(Processor.class.getName());
 
@@ -462,7 +462,7 @@ public class Calculator {
 	}
 
 	public static class AsyncProcessor<I extends AsyncIface>
-			extends com.gitlab.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncProcessor<I> {
+			extends com.git.huanghaifeng.thrift.tutorial.shared.SharedService.AsyncProcessor<I> {
 		private static final Logger LOGGER = LoggerFactory.getLogger(AsyncProcessor.class.getName());
 
 		public AsyncProcessor(I iface) {

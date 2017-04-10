@@ -1,13 +1,14 @@
-package com.gitlab.huanghaifeng.thrift.tutorial;
-
-import com.gitlab.huanghaifeng.thrift.tutorial.tutorial.*;
-import com.gitlab.huanghaifeng.thrift.tutorial.shared.*;
+package com.git.huanghaifeng.thrift.tutorial;
 
 import org.apache.thrift.TException;
 import org.apache.thrift.transport.TSSLTransportFactory;
 import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
+
+import com.git.huanghaifeng.thrift.tutorial.shared.*;
+import com.git.huanghaifeng.thrift.tutorial.tutorial.*;
+
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
 

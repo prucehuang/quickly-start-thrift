@@ -4,7 +4,7 @@
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  *  @generated
  */
-package com.gitlab.huanghaifeng.thrift.tutorial.tutorial;
+package com.git.huanghaifeng.thrift.tutorial.tutorial;
 
 
 /**
